@@ -33,6 +33,22 @@
   img {
     width: 20px;
   }
+  @media (orientation: portrait) {
+    .table {
+      display: none;
+    }
+    p {
+      text-align: center;
+    }
+  }
+  @media (orientation: landscape) {
+    .table {
+      display: flex;
+    }
+    .alert {
+      display: none;
+    }
+  }
 </style>
 
 <div class="table">
@@ -57,4 +73,7 @@
       </tr>
     {/each}
   </table>
+</div>
+<div class="alert">
+  <p>Para ver la tabla gira tu teléfono.</p>
 </div>
