@@ -18,3 +18,7 @@ ul {
 *:focus {
   outline: none;
 }
+
+footer {
+  margin: 0;
+}

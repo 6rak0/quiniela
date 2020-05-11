@@ -306,390 +306,471 @@ const jornadas = [
   [
     {
       loc: 'mon',
-      vis: 'snl'
+      vis: 'snl',
+      res: '0 - 3'
     },
     {
       loc:'bra',
-      vis:'leo'
+      vis:'leo',
+      res: '0 - 4'
     },
     {
       loc:'pue',
-      vis:'tig'
+      vis:'tig',
+      res: '1 - 0'
     },
     {
       loc:'ats',
-      vis:'gdl'
+      vis:'gdl',
+      res: '1 - 1'
     },
     {
       loc:'caz',
-      vis:'tij'
+      vis:'tij',
+      res: '2 - 1'
     },
     {
       loc:'pac',
-      vis:'san'
+      vis:'san',
+      res: '1 - 0'
     },
     {
       loc:'que',
-      vis:'tol'
+      vis:'tol',
+      res: '5 - 1'
     },
     {
       loc:'nec',
-      vis:'mor'
+      vis:'mor',
+      res: '6 - 2'
     },
     {
       loc:'unam',
-      vis:'ame'
-    }
-  ],
-  [
-    {
-      number: '1',
-      loc: 'tol',
-      vis: 'ats'
-    },
-    {
-      number: 2,
-      loc:'tig',
-      vis:'bra'
-    },
-    {
-      number: 3,
-      loc:'mor',
-      vis:'que'
-    },
-    {
-      number: 4,
-      loc:'gdl',
-      vis:'mon'
-    },
-    {
-      number: 5,
-      loc:'leo',
-      vis:'unam'
-    },
-    {
-      number: 6,
-      loc:'tij',
-      vis:'pac'
-    },
-    {
-      number: 7,
-      loc:'san',
-      vis:'nec'
-    },
-    {
-      number: 8,
-      loc:'ame',
-      vis:'caz'
-    },
-    {
-      number: 9,
-      loc:'snl',
-      vis:'pue'
+      vis:'ame',
+      res: '1 - 3'
     }
   ],
   [
     {
       loc: 'tol',
-      vis: 'ats'
+      vis: 'ats',
+      res: null
     },
     {
       loc:'tig',
-      vis:'bra'
+      vis:'bra',
+      res: null
     },
     {
       loc:'mor',
-      vis:'que'
+      vis:'que',
+      res: null
     },
     {
       loc:'gdl',
-      vis:'mon'
+      vis:'mon',
+      res: null
     },
     {
       loc:'leo',
-      vis:'unam'
+      vis:'unam',
+      res: null
     },
     {
       loc:'tij',
-      vis:'pac'
+      vis:'pac',
+      res: null
     },
     {
       loc:'san',
-      vis:'nec'
+      vis:'nec',
+      res: null
     },
     {
       loc:'ame',
-      vis:'caz'
+      vis:'caz',
+      res: null
     },
     {
       loc:'snl',
-      vis:'pue'
+      vis:'pue',
+      res: null
     }
   ],
   [
     {
       loc: 'tol',
-      vis: 'ats'
+      vis: 'ats',
+      res: null
     },
     {
       loc:'tig',
-      vis:'bra'
+      vis:'bra',
+      res: null
     },
     {
       loc:'mor',
-      vis:'que'
+      vis:'que',
+      res: null
     },
     {
       loc:'gdl',
-      vis:'mon'
+      vis:'mon',
+      res: null
     },
     {
       loc:'leo',
-      vis:'unam'
+      vis:'unam',
+      res: null
     },
     {
       loc:'tij',
-      vis:'pac'
+      vis:'pac',
+      res: null
     },
     {
       loc:'san',
-      vis:'nec'
+      vis:'nec',
+      res: null
     },
     {
       loc:'ame',
-      vis:'caz'
+      vis:'caz',
+      res: null
     },
     {
       loc:'snl',
-      vis:'pue'
+      vis:'pue',
+      res: null
     }
   ],
   [
     {
       loc: 'tol',
-      vis: 'ats'
+      vis: 'ats',
+      res: null
     },
     {
       loc:'tig',
-      vis:'bra'
+      vis:'bra',
+      res: null
     },
     {
       loc:'mor',
-      vis:'que'
+      vis:'que',
+      res: null
     },
     {
       loc:'gdl',
-      vis:'mon'
+      vis:'mon',
+      res: null
     },
     {
       loc:'leo',
-      vis:'unam'
+      vis:'unam',
+      res: null
     },
     {
       loc:'tij',
-      vis:'pac'
+      vis:'pac',
+      res: null
     },
     {
       loc:'san',
-      vis:'nec'
+      vis:'nec',
+      res: null
     },
     {
       loc:'ame',
-      vis:'caz'
+      vis:'caz',
+      res: null
     },
     {
       loc:'snl',
-      vis:'pue'
+      vis:'pue',
+      res: null
     }
   ],
   [
     {
       loc: 'tol',
-      vis: 'ats'
+      vis: 'ats',
+      res: null
     },
     {
       loc:'tig',
-      vis:'bra'
+      vis:'bra',
+      res: null
     },
     {
       loc:'mor',
-      vis:'que'
+      vis:'que',
+      res: null
     },
     {
       loc:'gdl',
-      vis:'mon'
+      vis:'mon',
+      res: null
     },
     {
       loc:'leo',
-      vis:'unam'
+      vis:'unam',
+      res: null
     },
     {
       loc:'tij',
-      vis:'pac'
+      vis:'pac',
+      res: null
     },
     {
       loc:'san',
-      vis:'nec'
+      vis:'nec',
+      res: null
     },
     {
       loc:'ame',
-      vis:'caz'
+      vis:'caz',
+      res: null
     },
     {
       loc:'snl',
-      vis:'pue'
+      vis:'pue',
+      res: null
     }
   ],
   [
     {
       loc: 'tol',
-      vis: 'ats'
+      vis: 'ats',
+      res: null
     },
     {
       loc:'tig',
-      vis:'bra'
+      vis:'bra',
+      res: null
     },
     {
       loc:'mor',
-      vis:'que'
+      vis:'que',
+      res: null
     },
     {
       loc:'gdl',
-      vis:'mon'
+      vis:'mon',
+      res: null
     },
     {
       loc:'leo',
-      vis:'unam'
+      vis:'unam',
+      res: null
     },
     {
       loc:'tij',
-      vis:'pac'
+      vis:'pac',
+      res: null
     },
     {
       loc:'san',
-      vis:'nec'
+      vis:'nec',
+      res: null
     },
     {
       loc:'ame',
-      vis:'caz'
+      vis:'caz',
+      res: null
     },
     {
       loc:'snl',
-      vis:'pue'
+      vis:'pue',
+      res: null
     }
   ],
   [
     {
       loc: 'tol',
-      vis: 'ats'
+      vis: 'ats',
+      res: null
     },
     {
       loc:'tig',
-      vis:'bra'
+      vis:'bra',
+      res: null
     },
     {
       loc:'mor',
-      vis:'que'
+      vis:'que',
+      res: null
     },
     {
       loc:'gdl',
-      vis:'mon'
+      vis:'mon',
+      res: null
     },
     {
       loc:'leo',
-      vis:'unam'
+      vis:'unam',
+      res: null
     },
     {
       loc:'tij',
-      vis:'pac'
+      vis:'pac',
+      res: null
     },
     {
       loc:'san',
-      vis:'nec'
+      vis:'nec',
+      res: null
     },
     {
       loc:'ame',
-      vis:'caz'
+      vis:'caz',
+      res: null
     },
     {
       loc:'snl',
-      vis:'pue'
+      vis:'pue',
+      res: null
     }
   ],
   [
     {
       loc: 'tol',
-      vis: 'ats'
+      vis: 'ats',
+      res: null
     },
     {
       loc:'tig',
-      vis:'bra'
+      vis:'bra',
+      res: null
     },
     {
       loc:'mor',
-      vis:'que'
+      vis:'que',
+      res: null
     },
     {
       loc:'gdl',
-      vis:'mon'
+      vis:'mon',
+      res: null
     },
     {
       loc:'leo',
-      vis:'unam'
+      vis:'unam',
+      res: null
     },
     {
       loc:'tij',
-      vis:'pac'
+      vis:'pac',
+      res: null
     },
     {
       loc:'san',
-      vis:'nec'
+      vis:'nec',
+      res: null
     },
     {
       loc:'ame',
-      vis:'caz'
+      vis:'caz',
+      res: null
     },
     {
       loc:'snl',
-      vis:'pue'
+      vis:'pue',
+      res: null
     }
   ],
   [
     {
       loc: 'tol',
-      vis: 'ats'
+      vis: 'ats',
+      res: null
     },
     {
       loc:'tig',
-      vis:'bra'
+      vis:'bra',
+      res: null
     },
     {
       loc:'mor',
-      vis:'que'
+      vis:'que',
+      res: null
     },
     {
       loc:'gdl',
-      vis:'mon'
+      vis:'mon',
+      res: null
     },
     {
       loc:'leo',
-      vis:'unam'
+      vis:'unam',
+      res: null
     },
     {
       loc:'tij',
-      vis:'pac'
+      vis:'pac',
+      res: null
     },
     {
       loc:'san',
-      vis:'nec'
+      vis:'nec',
+      res: null
     },
     {
       loc:'ame',
-      vis:'caz'
+      vis:'caz',
+      res: null
     },
     {
       loc:'snl',
-      vis:'pue'
+      vis:'pue',
+      res: null
+    }
+  ],
+  [
+    {
+      loc: 'tol',
+      vis: 'ats',
+      res: null
+    },
+    {
+      loc:'tig',
+      vis:'bra',
+      res: null
+    },
+    {
+      loc:'mor',
+      vis:'que',
+      res: null
+    },
+    {
+      loc:'gdl',
+      vis:'mon',
+      res: null
+    },
+    {
+      loc:'leo',
+      vis:'unam',
+      res: null
+    },
+    {
+      loc:'tij',
+      vis:'pac',
+      res: null
+    },
+    {
+      loc:'san',
+      vis:'nec',
+      res: null
+    },
+    {
+      loc:'ame',
+      vis:'caz',
+      res: null
+    },
+    {
+      loc:'snl',
+      vis:'pue',
+      res: null
     }
   ],
 ];
