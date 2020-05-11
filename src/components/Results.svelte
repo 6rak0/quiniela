@@ -1,8 +1,14 @@
 <script>
-  import jornadas from "../../jornadas.js";
+  //import jornadas from "../../jornadas.js";
+  import { db } from "../../firebase.js";
 
   export let ja;
-  let partidos = jornadas[ja - 1];
+  //let partidos = jornadas[ja - 1];
+  let partidos = [];
+
+  db.collection(`partidos${ja}`).onSnapshot(data => {
+    partidos = data.docs;
+  });
 </script>
 
 <style>
@@ -16,10 +22,10 @@
   }
 </style>
 
-{#each partidos as partido, i}
+{#each partidos as partido}
   <div class="match-field">
-    <img src="./img/{partido.loc}.png" alt={partido.loc} />
-    <p>{partido.res || '  -  '}</p>
-    <img src="./img/{partido.vis}.png" alt={partido.vis} />
+    <img src="./img/{partido.data().loc}.png" alt={partido.data().loc} />
+    <p>{partido.data().res || '  -  '}</p>
+    <img src="./img/{partido.data().vis}.png" alt={partido.data().vis} />
   </div>
 {/each}
