@@ -38,9 +38,6 @@
     grid-template-columns: repeat(3, 1fr);
     gap: 30px;
   }
-  h2 {
-    text-align: center;
-  }
   @media (max-width: 480px) {
     .movie-list {
       grid-template-columns: repeat(2, 1fr);
@@ -49,7 +46,6 @@
   }
 </style>
 
-<h2>Jornada {ja}</h2>
 <div class="movie-list">
   {#each players as player (player.id)}
     <div animate:flip={{ duration: 500 }}>

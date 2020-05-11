@@ -19,9 +19,13 @@
     max-width: 960px;
     margin: 40px auto;
   }
+  h2 {
+    text-align: center;
+  }
 </style>
 
 <main>
+  <h2>Jornada {jornadaActiva}</h2>
   <Tabs {items} {activeItem} on:tabChange={tabChange} />
   {#if activeItem === 'puntos'}
     <PlayerTotals ja={jornadaActiva} />
