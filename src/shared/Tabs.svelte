@@ -8,7 +8,7 @@
 
 <style>
   .tabs {
-    margin-block-end: 40px;
+    margin-block-end: 20px;
   }
   ul {
     display: flex;
@@ -16,7 +16,7 @@
     padding: 0;
   }
   li {
-    margin: 0 16px;
+    margin: 0 8px;
     font-size: 1.2rem;
     color: #555;
     cursor: pointer;
