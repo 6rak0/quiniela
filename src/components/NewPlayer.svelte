@@ -13,7 +13,7 @@
   const handleSubmit = () => {
     player.total = 0;
     db.collection(`jornada${ja}`).add(player);
-    dispatcher("tabChange", "resultados");
+    dispatcher("tabChange", "puntos");
   };
 </script>
 

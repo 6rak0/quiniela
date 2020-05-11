@@ -4,8 +4,8 @@
   import NewPlayer from "./components/NewPlayer.svelte";
   import PlayerTotals from "./components/PlayerTotals.svelte";
 
-  let items = ["resultados", "entrada"];
-  let activeItem = "resultados";
+  let items = ["puntos", "entrada"];
+  let activeItem = "puntos";
   const jornadaActiva = 10;
 
   const tabChange = e => {
@@ -20,10 +20,10 @@
   }
 </style>
 
-<Header title="quiniela" />
+<Header />
 <main>
   <Tabs {items} {activeItem} on:tabChange={tabChange} />
-  {#if activeItem === 'resultados'}
+  {#if activeItem === 'puntos'}
     <PlayerTotals ja={jornadaActiva} />
   {:else if activeItem === 'entrada'}
     <NewPlayer on:tabChange={tabChange} ja={jornadaActiva} />

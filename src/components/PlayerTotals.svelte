@@ -5,26 +5,26 @@
   import jornadas from "../../jornadas.js";
 
   export let ja;
-  let users = [];
+  let players = [];
 
   db.collection(`jornada${ja}`).onSnapshot(data => {
-    users = data.docs;
+    players = data.docs;
     let resultados;
-    users.forEach(user => {
-      if (user.data().name === "resultados") {
-        resultados = user.data();
+    players.forEach(user => {
+      if (player.data().name === "resultados") {
+        resultados = player.data();
       }
       let puntos = 0;
       for (let i = 0; i < 9; i++) {
-        if (user.data()[i] === resultados[i]) {
+        if (player.data()[i] === resultados[i]) {
           puntos++;
         }
       }
       db.collection(`jornada${ja}`)
-        .doc(user.id)
+        .doc(player.id)
         .update({ total: puntos });
     });
-    users = users.filter(user => user.data().name != "resultados");
+    players = players.filter(player => player.data().name != "resultados");
   });
 </script>
 
@@ -36,14 +36,18 @@
     grid-template-columns: repeat(3, 1fr);
     gap: 30px;
   }
+  h2 {
+    text-align: center;
+  }
 </style>
 
+<h2>Jornada {ja}</h2>
 <div class="movie-list">
-  {#each users as user (user.id)}
+  {#each players as player (player.id)}
     <div animate:flip={{ duration: 500 }}>
       <Card>
-        <h2>{user.data().name}</h2>
-        <p>{user.data().total}</p>
+        <h2>{player.data().name}</h2>
+        <p>{player.data().total}</p>
       </Card>
     </div>
   {/each}
