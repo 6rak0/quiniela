@@ -1,5 +1,4 @@
 <script>
-  import Header from "./components/Header.svelte";
   import Tabs from "./shared/Tabs.svelte";
   import NewPlayer from "./components/NewPlayer.svelte";
   import PlayerTotals from "./components/PlayerTotals.svelte";
@@ -20,7 +19,6 @@
   }
 </style>
 
-<Header />
 <main>
   <Tabs {items} {activeItem} on:tabChange={tabChange} />
   {#if activeItem === 'puntos'}
