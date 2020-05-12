@@ -7,27 +7,29 @@
   export let ja;
   let players = [];
 
-  db.collection(`jornada${ja}`).onSnapshot(data => {
-    players = data.docs;
-    let resultados;
-    players.forEach(player => {
-      if (player.data().name === "resultados") {
-        resultados = player.data();
-      }
-      players = players.filter(player => player.data().name != "resultados");
-    });
-    players.forEach(player => {
-      let puntos = 0;
-      for (let i = 0; i < 9; i++) {
-        if (player.data()[i] === resultados[i]) {
-          puntos++;
+  db.collection(`jornada${ja}`)
+    .orderBy("total", "desc")
+    .onSnapshot(data => {
+      players = data.docs;
+      let resultados;
+      players.forEach(player => {
+        if (player.data().name === "resultados") {
+          resultados = player.data();
         }
-      }
-      db.collection(`jornada${ja}`)
-        .doc(player.id)
-        .update({ total: puntos });
+        players = players.filter(player => player.data().name != "resultados");
+      });
+      players.forEach(player => {
+        let puntos = 0;
+        for (let i = 0; i < 9; i++) {
+          if (player.data()[i] === resultados[i]) {
+            puntos++;
+          }
+        }
+        db.collection(`jornada${ja}`)
+          .doc(player.id)
+          .update({ total: puntos });
+      });
     });
-  });
 </script>
 
 <style>
