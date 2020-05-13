@@ -15,8 +15,6 @@
   const tabChange = e => {
     activeItem = e.detail;
   };
-
-  console.log(version);
 </script>
 
 <style>
