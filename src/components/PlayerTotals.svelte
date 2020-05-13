@@ -2,7 +2,6 @@
   import { flip } from "svelte/animate";
   import { db } from "../../firebase.js";
   import Card from "../shared/Card.svelte";
-  import jornadas from "../../jornadas.js";
 
   export let ja;
   let players = [];

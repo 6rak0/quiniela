@@ -8,13 +8,15 @@
 
   let items = ["puntos", "registro", "resultados", "tabla"];
   let activeItem = "puntos";
-  const jornadaActiva = 10;
+  const jornadaActiva = 11;
   const now = Date.now();
-  const limit = 1589223300000;
+  const limit = 1589568900000;
 
   const tabChange = e => {
     activeItem = e.detail;
   };
+
+  console.log(version);
 </script>
 
 <style>

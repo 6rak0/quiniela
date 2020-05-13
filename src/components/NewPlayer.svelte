@@ -2,12 +2,15 @@
   import { createEventDispatcher } from "svelte";
   import { db } from "../../firebase.js";
   import Button from "../shared/Button.svelte";
-  import jornadas from "../../jornadas.js";
 
   const dispatcher = createEventDispatcher();
 
   export let ja;
-  const partidos = jornadas[ja - 1];
+  let partidos = [];
+
+  db.collection(`partidos${ja}`).onSnapshot(data => {
+    partidos = data.docs;
+  });
 
   let player = {};
   const handleSubmit = () => {
@@ -49,21 +52,26 @@
 
 <form on:submit|preventDefault={handleSubmit}>
   <div class="form-field">
-    <input type="text" placeholder="nombre" required bind:value={player.name} />
+    <input
+      type="text"
+      placeholder="nombre"
+      maxlength="11"
+      required
+      bind:value={player.name} />
   </div>
   {#each partidos as partido, i}
     <div class="form-field">
       <div class="input-field">
-        <img src="./img/{partido.loc}.png" alt={partido.loc} />
+        <img src="./img/{partido.data().loc}.png" alt={partido.data().loc} />
         <select bind:value={player[i]}>
-          <option value="error">Elige</option>
+          <option value="null">Elige</option>
           <option value="L">L</option>
           <option value="E">E</option>
           <option value="V">V</option>
         </select>
-        <img src="./img/{partido.vis}.png" alt={partido.vis} />
+        <img src="./img/{partido.data().vis}.png" alt={partido.data().vis} />
       </div>
     </div>
   {/each}
-  <Button>👍</Button>
+  <Button>enviar 👍</Button>
 </form>

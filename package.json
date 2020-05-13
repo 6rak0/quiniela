@@ -1,6 +1,6 @@
 {
   "name": "quiniela",
-  "version": "0.1.8",
+  "version": "0.1.9",
   "description": "test quiniela",
   "devDependencies": {
     "@rollup/plugin-commonjs": "11.0.2",
