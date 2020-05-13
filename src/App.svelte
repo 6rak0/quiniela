@@ -7,10 +7,12 @@
   import Footer from "./components/Footer.svelte";
 
   let items = ["puntos", "registro", "resultados", "tabla"];
-  let activeItem = "puntos";
+
   const jornadaActiva = 11;
   const now = Date.now();
   const limit = 1589568900000;
+
+  let activeItem = now < limit ? "registro" : "puntos";
 
   const tabChange = e => {
     activeItem = e.detail;

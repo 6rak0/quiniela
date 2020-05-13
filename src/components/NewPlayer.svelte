@@ -7,16 +7,33 @@
 
   export let ja;
   let partidos = [];
+  let players = [];
+  let newPlayer = {};
+  newPlayer.total = 0;
+  let check = false;
 
-  db.collection(`partidos${ja}`).onSnapshot(data => {
-    partidos = data.docs;
-  });
+  db.collection(`partidos${ja}`).onSnapshot(data => (partidos = data.docs));
+  db.collection(`jornada${ja}`).onSnapshot(data => (players = data.docs));
 
-  let player = {};
+  const checkName = () => {
+    players.forEach(player => {
+      if (player.data().name === newPlayer.name) {
+        check = true;
+      }
+    });
+  };
+
   const handleSubmit = () => {
-    player.total = 0;
-    db.collection(`jornada${ja}`).add(player);
-    dispatcher("tabChange", "puntos");
+    checkName();
+    if (check) {
+      check = false;
+      alert(`el nombre ${newPlayer.name} está ocupado, intenta con otro`);
+    } else {
+      db.collection(`jornada${ja}`)
+        .doc(newPlayer.name)
+        .set(newPlayer);
+      dispatcher("tabChange", "puntos");
+    }
   };
 </script>
 
@@ -57,13 +74,13 @@
       placeholder="nombre"
       maxlength="11"
       required
-      bind:value={player.name} />
+      bind:value={newPlayer.name} />
   </div>
   {#each partidos as partido, i}
     <div class="form-field">
       <div class="input-field">
         <img src="./img/{partido.data().loc}.png" alt={partido.data().loc} />
-        <select bind:value={player[i]}>
+        <select bind:value={newPlayer[i]}>
           <option value="null">Elige</option>
           <option value="L">L</option>
           <option value="E">E</option>
