@@ -151,3 +151,5 @@ temp/
 
 /public/build/
 firebase.js
+# Local Netlify folder
+.netlify

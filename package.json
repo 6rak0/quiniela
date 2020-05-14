@@ -23,5 +23,8 @@
     "start": "sirv public"
   },
   "author": "6rak0",
-  "license": "ISC"
+  "license": "ISC",
+  "browserslist": [
+    "last 1 chrome version"
+  ]
 }
