@@ -1,6 +1,6 @@
 {
   "name": "quiniela",
-  "version": "0.2.3",
+  "version": "0.2.4",
   "description": "test quiniela",
   "devDependencies": {
     "@rollup/plugin-commonjs": "11.0.2",
@@ -14,7 +14,6 @@
     "svelte": "^3.0.0"
   },
   "dependencies": {
-    "dotenv": "^8.2.0",
     "firebase": "^7.14.2",
     "sirv-cli": "^0.4.4"
   },
