@@ -2,7 +2,7 @@ import firebase from 'firebase/app';
 import 'firebase/firestore';
 
 const firebaseConfig = {
-  apiKey: process.env.API_KEY,
+  apiKey: 'AIzaSyAONcYUkv3Ke3Ds6Uz2QDQJGsPPRNtCwoo',
   authDomain: 'quiniela-79948.firebaseapp.com',
   databaseURL: 'https://quiniela-79948.firebaseio.com',
   projectId: 'quiniela-79948',
