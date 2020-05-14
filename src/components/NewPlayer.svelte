@@ -79,14 +79,14 @@
   {#each partidos as partido, i}
     <div class="form-field">
       <div class="input-field">
-        <img src="./img/{partido.data().loc}.png" alt={partido.data().loc} />
+        <img src="img/{partido.data().loc}.png" alt={partido.data().loc} />
         <select bind:value={newPlayer[i]}>
           <option value="null">Elige</option>
           <option value="L">L</option>
           <option value="E">E</option>
           <option value="V">V</option>
         </select>
-        <img src="./img/{partido.data().vis}.png" alt={partido.data().vis} />
+        <img src="img/{partido.data().vis}.png" alt={partido.data().vis} />
       </div>
     </div>
   {/each}
