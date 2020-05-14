@@ -80,8 +80,8 @@
     <div class="form-field">
       <div class="input-field">
         <img src="img/{partido.data().loc}.png" alt={partido.data().loc} />
-        <select bind:value={newPlayer[i]}>
-          <option value="null">Elige</option>
+        <select required bind:value={newPlayer[i]}>
+          <option value="">Elige</option>
           <option value="L">L</option>
           <option value="E">E</option>
           <option value="V">V</option>

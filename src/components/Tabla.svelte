@@ -6,10 +6,12 @@
   let partidos = [];
   const i = [0, 1, 2, 3, 4, 5, 6, 7, 8];
 
-  db.collection(`jornada${ja}`).onSnapshot(data => {
-    players = data.docs;
-    players = players.filter(player => player.data().name != "resultados");
-  });
+  db.collection(`jornada${ja}`)
+    .orderBy("total", "desc")
+    .onSnapshot(data => {
+      players = data.docs;
+      players = players.filter(player => player.data().name != "resultados");
+    });
   db.collection(`partidos${ja}`).onSnapshot(data => {
     partidos = data.docs;
   });
