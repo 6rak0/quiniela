@@ -149,7 +149,5 @@ temp/
 
 # End of https://www.gitignore.io/api/node,macos,dotenv,firebase
 
-/public
-# Local Netlify folder
-.netlify
+public/
 .vercel
