@@ -1,6 +1,6 @@
 <script>
   //import jornadas from "../../jornadas.js";
-  import { db } from "../../firebase.js";
+  import { db } from "../firebase.js";
 
   export let ja;
   //let partidos = jornadas[ja - 1];

@@ -1,5 +1,5 @@
 <script>
-  import { db } from "../../firebase.js";
+  import { db } from "../firebase.js";
 
   export let ja;
   let players = [];

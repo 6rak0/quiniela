@@ -1,6 +1,6 @@
 <script>
   import { createEventDispatcher } from "svelte";
-  import { db } from "../../firebase.js";
+  import { db } from "../firebase.js";
   import Button from "../shared/Button.svelte";
 
   const dispatcher = createEventDispatcher();
