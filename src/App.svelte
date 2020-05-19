@@ -8,9 +8,9 @@
 
   let items = ["puntos", "registro", "resultados", "tabla"];
 
-  const jornadaActiva = 11;
+  const jornadaActiva = 13;
   const now = Date.now();
-  const limit = 1589568900000;
+  const limit = 1590173700000;
 
   let activeItem = now < limit ? "registro" : "puntos";
 
