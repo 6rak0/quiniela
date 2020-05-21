@@ -3,7 +3,7 @@
   import { db } from "../firebase.js";
 
   export let ja;
-  //let partidos = jornadas[ja - 1];
+
   let partidos = [];
 
   db.collection(`partidos${ja}`).onSnapshot(data => {
