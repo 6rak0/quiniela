@@ -21,19 +21,16 @@
   //   activeItem = e.detail;
   // };
 
-  const handleClick = e => {
-    console.log(e.detail);
-  };
-  const minus = () => {
-    jornadaActiva = jornadas.find(
-      jornada => jornadaActiva.numero - 1 === jornada.numero
-    );
-  };
-  const plus = () => {
-    jornadaActiva = jornadas.find(
-      jornada => jornadaActiva.numero + 1 === jornada.numero
-    );
-  };
+  // const minus = () => {
+  //   jornadaActiva = jornadas.find(
+  //     jornada => jornadaActiva.numero - 1 === jornada.numero
+  //   );
+  // };
+  // const plus = () => {
+  //   jornadaActiva = jornadas.find(
+  //     jornada => jornadaActiva.numero + 1 === jornada.numero
+  //   );
+  // };
 </script>
 
 <style>
@@ -75,15 +72,15 @@
     <Tabla on:tabChange={tabChange} ja={jornadaActiva} />
   {/if} -->
   <ul>
-    <li>
+    <!-- <li>
       <button on:click={minus}>«</button>
-    </li>
+    </li> -->
     <li>
       <h2>Jornada {jornadaActiva.numero}</h2>
     </li>
-    <li>
+    <!-- <li>
       <button on:click={plus}>»</button>
-    </li>
+    </li> -->
   </ul>
   <Jornada {jornadaActiva} />
 </main>
