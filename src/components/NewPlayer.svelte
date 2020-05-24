@@ -5,15 +5,15 @@
 
   const dispatcher = createEventDispatcher();
 
-  export let ja;
-  let partidos = [];
+  export let jornadaActiva;
   let players = [];
   let newPlayer = {};
   newPlayer.total = 0;
   let check = false;
 
-  db.collection(`partidos${ja}`).onSnapshot(data => (partidos = data.docs));
-  db.collection(`jornada${ja}`).onSnapshot(data => (players = data.docs));
+  db.collection(`jornada${jornadaActiva.numero}`).onSnapshot(
+    data => (players = data.docs)
+  );
 
   const checkName = () => {
     players.forEach(player => {
@@ -29,7 +29,7 @@
       check = false;
       alert(`el nombre ${newPlayer.name} está ocupado, intenta con otro`);
     } else {
-      db.collection(`jornada${ja}`)
+      db.collection(`jornada${jornadaActiva.numero}`)
         .doc(newPlayer.name)
         .set(newPlayer);
       dispatcher("tabChange", "puntos");
@@ -76,17 +76,17 @@
       required
       bind:value={newPlayer.name} />
   </div>
-  {#each partidos as partido, i}
+  {#each jornadaActiva.partidos as { loc, vis }, i}
     <div class="form-field">
       <div class="input-field">
-        <img src="img/{partido.data().loc}.png" alt={partido.data().loc} />
+        <img src="img/{loc}.png" alt={loc} />
         <select required bind:value={newPlayer[i]}>
           <option value="">Elige</option>
           <option value="L">L</option>
           <option value="E">E</option>
           <option value="V">V</option>
         </select>
-        <img src="img/{partido.data().vis}.png" alt={partido.data().vis} />
+        <img src="img/{vis}.png" alt={vis} />
       </div>
     </div>
   {/each}

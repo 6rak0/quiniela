@@ -1,13 +1,13 @@
 <script>
-  //import jornadas from "../../jornadas.js";
   import { db } from "../firebase.js";
 
-  export let ja;
+  export let jornadaActiva;
+  let res = [];
 
-  let partidos = [];
-
-  db.collection(`partidos${ja}`).onSnapshot(data => {
-    partidos = data.docs;
+  db.collection(`jornada${jornadaActiva.numero}`).onSnapshot(data => {
+    res = data.docs;
+    res = res.find(player => player.data().name === "resultados");
+    res = res.data().partidos;
   });
 </script>
 
@@ -22,10 +22,10 @@
   }
 </style>
 
-{#each partidos as partido}
+{#each jornadaActiva.partidos as { loc, vis }, i}
   <div class="match-field">
-    <img src="./img/{partido.data().loc}.png" alt={partido.data().loc} />
-    <p>{partido.data().res || '  -  '}</p>
-    <img src="./img/{partido.data().vis}.png" alt={partido.data().vis} />
+    <img src="./img/{loc}.png" alt={loc} />
+    <p>{res[i] || '  -  '}</p>
+    <img src="./img/{vis}.png" alt={vis} />
   </div>
 {/each}

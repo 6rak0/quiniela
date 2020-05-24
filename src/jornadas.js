@@ -77,19 +77,133 @@ const jornadas = [
     fecha: '22 - 24 mayo',
     inicio: 1590123600000,
     fin: 1590382800000,
-    limit: 1590173700000
+    limit: 1590173700000,
+    partidos: [
+      {
+        loc: 'pac',
+        vis: 'nec'
+      },
+      {
+        loc: 'san',
+        vis: 'snl'
+      },
+      {
+        loc: 'ats',
+        vis: 'unam'
+      },
+      {
+        loc: 'pue',
+        vis: 'mor'
+      },
+      {
+        loc: 'caz',
+        vis: 'que'
+      },
+      {
+        loc: 'tig',
+        vis: 'mon'
+      },
+      {
+        loc: 'tol',
+        vis: 'leo'
+      },
+      {
+        loc: 'gdl',
+        vis: 'ame'
+      },
+      {
+        loc: 'tij',
+        vis: 'bra'
+      }
+    ]
   },
   {
     numero: 14,
     fecha: '25 - 27 mayo',
     limit: 1590432900000,
-    fin: 1590642000000
+    fin: 1590642000000,
+    partidos: [
+      {
+        loc: 'bra',
+        vis: 'pac'
+      },
+      {
+        loc: 'mon',
+        vis: 'tij'
+      },
+      {
+        loc: 'mor',
+        vis: 'tig'
+      },
+      {
+        loc: 'leo',
+        vis: 'caz'
+      },
+      {
+        loc: 'nec',
+        vis: 'gdl'
+      },
+      {
+        loc: 'snl',
+        vis: 'ats'
+      },
+      {
+        loc: 'unam',
+        vis: 'pue'
+      },
+      {
+        loc: 'ame',
+        vis: 'tol'
+      },
+      {
+        loc: 'que',
+        vis: 'san'
+      }
+    ]
   },
   {
     numero: 15,
     fecha: '29 - 31 mayo',
     limit: 1590778500000,
-    fin: 1590987600000
+    fin: 1590987600000,
+    partidos: [
+      {
+        loc: 'bra',
+        vis: 'pue'
+      },
+      {
+        loc: 'nec',
+        vis: 'unam'
+      },
+      {
+        loc: 'mor',
+        vis: 'pac'
+      },
+      {
+        loc: 'mon',
+        vis: 'caz'
+      },
+      {
+        loc: 'gdl',
+        vis: 'san'
+      },
+      {
+        loc: 'tol',
+        vis: 'tig'
+      },
+      {
+        loc: 'que',
+        vis: 'ats'
+      },
+      {
+        loc: 'leo',
+        vis: 'tig'
+      },
+      {
+        loc: 'ame',
+        vis: 'snl'
+      }
+    ]
   },
   {
     numero: 16,

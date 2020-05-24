@@ -1,20 +1,16 @@
 <script>
   import { db } from "../firebase.js";
 
-  export let ja;
+  export let jornadaActiva;
   let players = [];
-  let partidos = [];
   const i = [0, 1, 2, 3, 4, 5, 6, 7, 8];
 
-  db.collection(`jornada${ja}`)
+  db.collection(`jornada${jornadaActiva.numero}`)
     .orderBy("total", "desc")
     .onSnapshot(data => {
       players = data.docs;
       players = players.filter(player => player.data().name != "resultados");
     });
-  db.collection(`partidos${ja}`).onSnapshot(data => {
-    partidos = data.docs;
-  });
 </script>
 
 <style>
@@ -57,10 +53,10 @@
   <table>
     <tr>
       <th />
-      {#each partidos as partido}
+      {#each jornadaActiva.partidos as { loc, vis }}
         <th>
-          <img src="./img/{partido.data().loc}.png" alt={partido.data().loc} />
-          <img src="./img/{partido.data().vis}.png" alt={partido.data().vis} />
+          <img src="./img/{loc}.png" alt={loc} />
+          <img src="./img/{vis}.png" alt={vis} />
         </th>
       {/each}
       <th>Puntos</th>
@@ -69,7 +65,7 @@
       <tr>
         <td>{player.data().name}</td>
         {#each i as i}
-          <td>{player.data()[i]}</td>
+          <td>{player.data()[i] || ' - '}</td>
         {/each}
         <td>{player.data().total}</td>
       </tr>

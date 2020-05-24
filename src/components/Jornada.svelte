@@ -29,13 +29,13 @@
   <PlayerTotals ja={jornadaActiva.numero} />
 {:else if activeItem === 'registro'}
   {#if now < jornadaActiva.limit}
-    <NewPlayer on:tabChange={tabChange} ja={jornadaActiva.numero} />
+    <NewPlayer on:tabChange={tabChange} {jornadaActiva} />
   {:else}
     <p>No se aceptan más registros</p>
     <p>Nos vemos en la próxima jornada</p>
   {/if}
 {:else if activeItem === 'resultados'}
-  <Results on:tabChange={tabChange} ja={jornadaActiva.numero} />
+  <Results on:tabChange={tabChange} {jornadaActiva} />
 {:else if activeItem === 'tabla'}
-  <Tabla on:tabChange={tabChange} ja={jornadaActiva.numero} />
+  <Tabla on:tabChange={tabChange} {jornadaActiva} />
 {/if}
