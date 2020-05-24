@@ -76,7 +76,7 @@ const jornadas = [
     numero: 13,
     fecha: '22 - 24 mayo',
     inicio: 1590123600000,
-    fin: 1590296400000,
+    fin: 1590382800000,
     limit: 1590173700000
   },
   {
