@@ -10,7 +10,8 @@
   export let jornadaActiva;
   const now = Date.now();
 
-  let activeItem = now < jornadaActiva.limit ? "registro" : "puntos";
+  //let activeItem = now < jornadaActiva.limit ? "registro" : "puntos";
+  export let activeItem;
 
   const tabChange = e => {
     activeItem = e.detail;

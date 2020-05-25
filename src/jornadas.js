@@ -209,13 +209,89 @@ const jornadas = [
     numero: 16,
     fecha: '1 - 3 junio',
     limit: 1591037700000,
-    fin: 1591246800000
+    fin: 1591246800000,
+    partidos: [
+      {
+        loc: 'tig',
+        vis: 'tij'
+      },
+      {
+        loc: 'pue',
+        vis: 'mon'
+      },
+      {
+        loc: 'ats',
+        vis: 'leo'
+      },
+      {
+        loc: 'caz',
+        vis: 'nec'
+      },
+      {
+        loc: 'pac',
+        vis: 'ame'
+      },
+      {
+        loc: 'san',
+        vis: 'mor'
+      },
+      {
+        loc: 'unam',
+        vis: 'gdl'
+      },
+      {
+        loc: 'snl',
+        vis: 'tol'
+      },
+      {
+        loc: 'que',
+        vis: 'bra'
+      }
+    ]
   },
   {
     numero: 17,
     fecha: '5 - 7 junio',
     limit: 1591383300000,
-    fin: 1591592400000
+    fin: 1591592400000,
+    partidos: [
+      {
+        loc: 'leo',
+        vis: 'tig'
+      },
+      {
+        loc: 'nec',
+        vis: 'ats'
+      },
+      {
+        loc: 'tij',
+        vis: 'snl'
+      },
+      {
+        loc: 'mon',
+        vis: 'pac'
+      },
+      {
+        loc: 'san',
+        vis: 'tol'
+      },
+      {
+        loc: 'bra',
+        vis: 'caz'
+      },
+      {
+        loc: 'gdl',
+        vis: 'pue'
+      },
+      {
+        loc: 'unam',
+        vis: 'que'
+      },
+      {
+        loc: 'mor',
+        vis: 'ame'
+      }
+    ]
   }
 ];
 

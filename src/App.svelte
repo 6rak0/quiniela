@@ -5,17 +5,24 @@
 
   const now = Date.now();
   $: jornadaActiva = jornadas.find(jornada => now < jornada.fin);
+  let activeItem;
 
-  // const minus = () => {
-  //   jornadaActiva = jornadas.find(
-  //     jornada => jornadaActiva.numero - 1 === jornada.numero
-  //   );
-  // };
-  // const plus = () => {
-  //   jornadaActiva = jornadas.find(
-  //     jornada => jornadaActiva.numero + 1 === jornada.numero
-  //   );
-  // };
+  const minus = () => {
+    if (jornadaActiva.numero === 13) return;
+    else {
+      jornadaActiva = jornadas.find(
+        jornada => jornadaActiva.numero - 1 === jornada.numero
+      );
+    }
+  };
+  const plus = () => {
+    if (jornadaActiva.numero === 17) return;
+    else {
+      jornadaActiva = jornadas.find(
+        jornada => jornadaActiva.numero + 1 === jornada.numero
+      );
+    }
+  };
 </script>
 
 <style>
@@ -41,16 +48,16 @@
 
 <main>
   <ul>
-    <!-- <li>
+    <li>
       <button on:click={minus}>«</button>
-    </li> -->
+    </li>
     <li>
       <h2>Jornada {jornadaActiva.numero}</h2>
     </li>
-    <!-- <li>
+    <li>
       <button on:click={plus}>»</button>
-    </li> -->
+    </li>
   </ul>
-  <Jornada {jornadaActiva} />
+  <Jornada {jornadaActiva} {activeItem} />
 </main>
 <Footer />
