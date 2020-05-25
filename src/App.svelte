@@ -5,7 +5,6 @@
 
   const now = Date.now();
   $: jornadaActiva = jornadas.find(jornada => now < jornada.fin);
-  let activeItem;
 
   const minus = () => {
     if (jornadaActiva.numero === 13) return;
@@ -44,9 +43,18 @@
     font-size: 1.2rem;
     color: #555;
   }
+  img {
+    width: 40%;
+  }
+  .logo {
+    text-align: center;
+  }
 </style>
 
 <main>
+  <div class="logo">
+    <img src="/img/logo_liga_mx.png" alt="logo" />
+  </div>
   <ul>
     <li>
       <button on:click={minus}>«</button>
@@ -58,6 +66,6 @@
       <button on:click={plus}>»</button>
     </li>
   </ul>
-  <Jornada {jornadaActiva} {activeItem} />
+  <Jornada {jornadaActiva} />
 </main>
 <Footer />

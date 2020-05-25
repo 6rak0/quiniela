@@ -5,13 +5,12 @@
   import Results from "./Results.svelte";
   import Tabla from "./Tabla.svelte";
 
-  let items = ["puntos", "registro", "resultados", "tabla"];
+  let items = ["registro", "puntos", "tabla", "resultados"];
 
   export let jornadaActiva;
   const now = Date.now();
 
-  //let activeItem = now < jornadaActiva.limit ? "registro" : "puntos";
-  export let activeItem;
+  let activeItem = now < jornadaActiva.limit ? "registro" : "puntos";
 
   const tabChange = e => {
     activeItem = e.detail;
