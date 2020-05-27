@@ -197,7 +197,7 @@ const jornadas = [
       },
       {
         loc: 'leo',
-        vis: 'tig'
+        vis: 'tij'
       },
       {
         loc: 'ame',
