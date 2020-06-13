@@ -5,8 +5,7 @@
   let res = [];
 
   db.collection(`jornada${jornadaActiva.numero}`).onSnapshot(data => {
-    res = data.docs;
-    res = res.find(player => player.data().name === "resultados");
+    res = data.docs.find(player => player.data().name === "resultados");
     res = res.data().partidos;
   });
 </script>

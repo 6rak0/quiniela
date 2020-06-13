@@ -7,10 +7,12 @@
 
   db.collection(`jornada${jornadaActiva.numero}`)
     .orderBy("total", "desc")
-    .onSnapshot(data => {
-      players = data.docs;
-      players = players.filter(player => player.data().name != "resultados");
-    });
+    .onSnapshot(
+      data =>
+        (players = data.docs.filter(
+          player => player.data().name != "resultados"
+        ))
+    );
 </script>
 
 <style>

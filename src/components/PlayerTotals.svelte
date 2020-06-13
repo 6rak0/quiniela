@@ -5,18 +5,17 @@
 
   export let ja;
   let players = [];
+  let resultados = {};
 
   db.collection(`jornada${ja}`)
     .orderBy("total", "desc")
     .onSnapshot(data => {
-      players = data.docs;
-      let resultados;
-      players.forEach(player => {
-        if (player.data().name === "resultados") {
-          resultados = player.data();
+      data.docs.forEach(doc => {
+        if (doc.data().name === "resultados") {
+          resultados = doc.data();
         }
-        players = players.filter(player => player.data().name != "resultados");
       });
+      players = data.docs.filter(player => player.data().name != "resultados");
       players.forEach(player => {
         let puntos = 0;
         for (let i = 0; i < 9; i++) {
@@ -48,7 +47,7 @@
 </style>
 
 <div class="movie-list">
-  {#each players as player (player.id)}
+  {#each players as player (player.data().name)}
     <div animate:flip={{ duration: 500 }}>
       <Card>
         <h3>{player.data().name}</h3>
